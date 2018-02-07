@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:form>
+		<p:growl id="messages" />
+
+		<p:menubar>
+			<p:submenu label="Ir" icon="ui-icon-arrow">
+				<p:menuitem value="Home" outcome="/pages/principal.xhtml" />	
+				<p:menuitem value="Sair"><h:commandLink action="#{login.logout}" value="Logout"></h:commandLink></p:menuitem>
+			</p:submenu>
+			
+			
+		
+			<p:submenu label="Cadastros" icon="ui-icon-pencil" >
+				<p:menuitem value="Fornecedores" outcome="/pages/fornecedores.xhtml" />
+				<p:menuitem value="Produtos"  outcome="/pages/produtos.xhtml"/>
+				<p:menuitem value="Funcionarios"  outcome="/pages/funcionarios.xhtml"/>
+			</p:submenu>
+			
+			<p:submenu label="Logado com :">
+				<p:menuitem value="#{login.user}" />
+			</p:submenu>
+					
+			
+		</p:menubar>
+	</h:form>
+				
+</ui:composition>

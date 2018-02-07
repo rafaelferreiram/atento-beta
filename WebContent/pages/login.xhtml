@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>login</title>
+</h:head>
+<h:body>
+	<div align="center" style="margin-top: 50px;">
+		<h:graphicImage library="images" name="dogaria.jpeg" width="550"
+			height="200" />
+		<br />
+		<h:graphicImage library="images" name="farmadog.png" width="200"
+			height="120" />
+	</div>
+
+
+	<div align="center" style="margin-top: 50px;">
+		<fieldset style="width: 250px;">
+			<legend><b>Entre no sistema da DOGaria</b></legend>
+			<h:form>
+				<p:growl id="messages" />
+				<h:inputText id="username" value="#{login.user}" a:placeholder="Username"></h:inputText>
+				<h:message for="username"></h:message>
+				<br></br>
+				<br></br>
+
+			
+				<h:inputSecret id="password" value="#{login.pwd}" a:placeholder="Senha" ></h:inputSecret>
+				<h:message for="password"></h:message>
+				<br></br>
+				<br></br>
+
+				<h:commandButton action="#{login.validateUsernamePassword}"
+					value="Login" style="width:170px;"></h:commandButton>
+			</h:form>
+		</fieldset>
+	</div>
+</h:body>
+</ui:composition>
