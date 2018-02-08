@@ -4,36 +4,39 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	template="/templates/modelo.xhtml" 
-	xmlns:p="http://primefaces.org/ui">
+	template="/templates/modelo.xhtml" xmlns:p="http://primefaces.org/ui">
 
 	<ui:define name="menu">
-		<ui:include src="/includes/menu.xhtml"/>
+		<ui:include src="/includes/menu.xhtml" />
 	</ui:define>
 
 	<ui:define name="conteudo">
 		<h:form id="frmProdutos">
-			<p:dataTable id="tbProdutos" emptyMessage="Nenhum registro encontrado !" widgetVar="tabelaProdutos"
-				value="#{MBProduto.itens}" var="item" filteredValue="#{MBProduto.itensFiltrados}" paginator="true" rows="23">
+			<p:dataTable id="tbProdutos"
+				emptyMessage="Nenhum registro encontrado !"
+				widgetVar="tabelaProdutos" value="#{MBProduto.itens}" var="item"
+				filteredValue="#{MBProduto.itensFiltrados}" paginator="true"
+				rows="23">
 
-			<f:facet name="header">Produtos em Estoque</f:facet>
+				<f:facet name="header">Produtos em Estoque</f:facet>
 
 				<p:column headerText="Nome" sortBy="#{item.descicao}">
 					<h:outputText value="#{item.descicao}" />
 				</p:column>
-				
+
 				<p:column headerText="Valor" sortBy="#{item.preco}">
 					<h:outputText value="R$ #{item.preco}" />
 				</p:column>
-				
+
 				<p:column headerText="Estoque" sortBy="#{item.quantidade}">
 					<h:outputText value="#{item.quantidade}" />
 				</p:column>
-				
-				
+
+
 			</p:dataTable>
 
 		</h:form>
+	
 	</ui:define>
 
 </ui:composition>

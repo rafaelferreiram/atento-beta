@@ -6,7 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/re035720/Downloads/javax-inject.jar"/>
 	<classpathentry kind="lib" path="C:/Users/re035720/Documents/Arquivos/Sistema Farmacia/Biblioteca/primefaces-4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/re035720/Documents/Arquivos/Sistema Farmacia/Biblioteca/mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/re035720/Documents/Arquivos/Sistema Farmacia/Biblioteca/javax.faces-2.2.9.jar"/>
@@ -28,5 +27,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/re035720/Downloads/Java/Jars/javax-inject.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

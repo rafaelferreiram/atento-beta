@@ -10,8 +10,9 @@
 		<p:growl id="messages" />
 
 		<p:menubar>
-			<p:submenu label="Ir" icon="ui-icon-arrow">
+			<p:submenu label="Opções" icon="ui-icon-arrow">
 				<p:menuitem value="Home" outcome="/pages/principal.xhtml" />	
+				<p:menuitem value="Contato" outcome="/pages/contato.xhtml" />
 				<p:menuitem value="Sair"><h:commandLink action="#{login.logout}" value="Logout"></h:commandLink></p:menuitem>
 			</p:submenu>
 			

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/modelo.xhtml" xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="menu">
+		<ui:include src="/includes/menu.xhtml" />
+	</ui:define>
+
+	<ui:define name="conteudo">
+
+		<script
+			src="http://maps.google.com/maps/api/js?key=AIzaSyBt2gAA9fQttQIx1YVpTMbuY_QeYkutt6I"
+			type="text/javascript"></script>
+		<br />
+		<h1>Localização</h1>
+		<p:gmap center="52.279976, 104.3259071" zoom="13" type="HYBRID"
+			style="width:100%;height:400px" model="#{MBMapa.simpleModel}" />
+
+		<h1>Entre em contato!</h1>
+ 		<div>
+			<h3>Telefone</h3>
+			<p>+7(026)072-2018</p>
+		</div>
+		<div style="margin-left:650px; margin-top:-77px;">
+			<h3>E-mail</h3>
+			<p>system@dogaria.com.ru</p>
+		</div>
+		<div style="margin-left:1300px; margin-top:-77px;">
+			<h3>Endereço</h3>
+			<p>8661 Sovetskaya Street</p>
+		</div> 
+
+	</ui:define>
+
+</ui:composition>
