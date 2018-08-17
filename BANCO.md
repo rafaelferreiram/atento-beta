@@ -1,0 +1,1 @@
+CREATE TABLE Fornecedores (descricao VARCHAR(255) ,codigo  INT NOT NULL AUTO_INCREMENT PRIMARY KEY);
